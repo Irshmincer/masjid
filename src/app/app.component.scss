@@ -13,3 +13,102 @@
     font-weight: 700;
     font-style: normal;
   }
+
+  .menu-button {
+    display: none; /* Hidden by default */
+  }
+  
+  .desktop-menu {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .example-spacer {
+    flex: 1 1 auto;
+  }
+  
+  /* Custom Top Drawer Styles */
+  .top-drawer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: white;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    z-index: 1000;
+    transform: translateY(-100%);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .top-drawer.open {
+    transform: translateY(0);
+  }
+  
+  /* Base font size */
+.responsive-text {
+  font-size: 90px;
+}
+
+/* Media Query for Mobile View */
+@media (max-width: 600px) {
+  .desktop-menu {
+    display: none; /* Hide menu items in mobile view */
+  }
+
+  .menu-button {
+    display: block; /* Show hamburger button in mobile view */
+  }
+
+  .responsive-text {
+    font-size: 30px;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 660px) {
+  .responsive-text {
+    font-size: 40px;
+  }
+}
+
+@media (min-width: 661px) and (max-width: 900px) {
+  .responsive-text {
+    font-size: 50px;
+  }
+}
+
+@media (min-width: 901px) and (max-width: 1200px) {
+  .responsive-text {
+    font-size: 70px;
+  }
+}
+
+@media (max-width: 400px) {
+  .responsive-text {
+    font-size: 15px;
+  }
+}
+
+
+.prayer-times-container {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: -9rem;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.prayer-time-box {
+  background-color: #FFFFFF;
+  width: 300px;
+  height: 100px;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .prayer-times-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+}
