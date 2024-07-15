@@ -17,16 +17,16 @@
   .menu-button {
     display: none; /* Hidden by default */
   }
-  
+
   .desktop-menu {
     display: flex;
     gap: 1rem;
   }
-  
+
   .example-spacer {
     flex: 1 1 auto;
   }
-  
+
   /* Custom Top Drawer Styles */
   .top-drawer {
     position: fixed;
@@ -39,11 +39,11 @@
     transform: translateY(-100%);
     transition: transform 0.3s ease-in-out;
   }
-  
+
   .top-drawer.open {
     transform: translateY(0);
   }
-  
+
   /* Base font size */
 .responsive-text {
   font-size: 90px;
@@ -112,3 +112,56 @@
     gap: 2rem;
   }
 }
+
+
+.container {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+}
+.image-container img {
+  width: 100%;
+  height: auto;
+}
+.text-container {
+  padding-top: 2rem;
+  text-align: center;
+}
+.pillars {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+.pillar {
+  text-align: center;
+}
+.pillar img {
+  width: 100px;
+  height: auto;
+}
+@media (min-width: 768px) {
+  .container {
+    flex-direction: row;
+    padding: 4rem;
+    gap: 2rem;
+  }
+  .text-container {
+    padding-top: 0;
+
+  }
+  .pillars {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (min-width: 1024px) {
+  .container {
+    padding: 8rem;
+    gap: 5rem;
+  }
+  .pillars {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+}
+
+
