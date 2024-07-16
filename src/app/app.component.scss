@@ -165,3 +165,76 @@
 }
 
 
+#follow-the-path-of-islam {
+  padding: 2rem;
+  text-align: center;
+}
+
+.header {
+  font-size: 24px;
+  padding: 20px;
+}
+
+.header h1 {
+  margin-bottom: 1rem;
+}
+
+.header p {
+  margin-top: 3rem;
+}
+
+.cards {
+  display: grid;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.card {
+  display: flex;
+  justify-content: center;
+}
+
+.mat-card {
+  padding: 20px;
+  width: 100%;
+}
+
+.card-content {
+  text-align: center;
+}
+
+.icon {
+  background: #d7ab26;
+  border-radius: 50%;
+  padding: 20px;
+  width: 100px;
+  height: 100px;
+  margin-bottom: 1rem;
+}
+
+/* Responsive Styles */
+@media (min-width: 768px) {
+  .cards {
+    grid-template-columns: 1fr 1fr;
+    padding: 4rem;
+  }
+
+  .card:nth-child(2) {
+    justify-content: flex-start;
+  }
+}
+
+@media (min-width: 1024px) {
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 8rem;
+  }
+
+  .card:nth-child(2) {
+    justify-content: center;
+  }
+
+  .card:nth-child(3) {
+    justify-content: flex-end;
+  }
+}
