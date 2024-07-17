@@ -1,0 +1,22 @@
+<mat-toolbar>
+    <button mat-icon-button (click)="toggleDrawer()" class="menu-button">
+      <mat-icon>menu</mat-icon>
+    </button>
+
+    <span><img src="../assets/mosque.svg" alt="masjidLOGO">AL-HASAN</span>
+    <span class="example-spacer"></span>
+    <div class="desktop-menu">
+      <button mat-button routerLink="/home">HOME</button>
+      <button mat-button routerLink="/prayer">PRAYER</button>
+      <button mat-button routerLink="/contact">CONTACT</button>
+    </div>
+  </mat-toolbar>
+
+  <!-- Custom Top Drawer -->
+  <div [ngClass]="{'top-drawer': true, 'open': drawerOpen}">
+    <mat-nav-list>
+      <a mat-list-item (click)="toggleDrawer()" routerLink="/home">HOME</a>
+      <a mat-list-item (click)="toggleDrawer()" routerLink="/prayer">PRAYER</a>
+      <a mat-list-item (click)="toggleDrawer()"routerLink="/contact">CONTACT</a>
+    </mat-nav-list>
+  </div>
